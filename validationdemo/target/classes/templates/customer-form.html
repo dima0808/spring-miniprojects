@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Form</title>
+</head>
+
+<body>
+
+<form th:action="@{/processForm}" th:object="${customer}" method="POST">
+
+    <label>
+        First name: <input type="text" th:field="*{firstName}" />
+    </label>
+
+    <span th:if="${#fields.hasErrors('firstName')}"
+          th:errors="*{firstName}"
+          style="color:red"></span>
+
+    <br><br>
+
+    <label>
+        Last name: <input type="text" th:field="*{lastName}" />
+    </label>
+
+    <span th:if="${#fields.hasErrors('lastName')}"
+          th:errors="*{lastName}"
+          style="color:red"></span>
+
+    <br><br>
+
+    <label>
+        Free passes: <input type="text" th:field="*{passes}" />
+    </label>
+
+    <span th:if="${#fields.hasErrors('passes')}"
+          th:errors="*{passes}"
+          style="color:red"></span>
+
+    <br><br>
+
+    <label>
+        Post number: <input type="text" th:field="*{postNumber}" />
+    </label>
+
+    <span th:if="${#fields.hasErrors('postNumber')}"
+          th:errors="*{postNumber}"
+          style="color:red"></span>
+
+    <br><br>
+
+    <label>
+        Referral code: <input type="text" th:field="*{referralCode}" />
+    </label>
+
+    <span th:if="${#fields.hasErrors('referralCode')}"
+          th:errors="*{referralCode}"
+          style="color:red"></span>
+
+    <br><br>
+
+    <input type="submit" >
+
+</form>
+
+</body>
+
+</html>

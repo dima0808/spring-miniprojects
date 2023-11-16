@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Confirmation</title>
+</head>
+
+<body>
+
+Customer name: <span th:text="${customer.firstName} + ' ' + ${customer.lastName}"></span>
+
+<br>
+
+Free passes: <span th:text="${customer.passes}"></span><br>
+
+Post number: <span th:text="${customer.postNumber}"></span><br>
+
+Referral code: <span th:text="${customer.referralCode}"></span>
+
+</body>
+
+</html>
